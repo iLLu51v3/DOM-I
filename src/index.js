@@ -41,35 +41,38 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 
 
 //Images
-const logoImg = document.querySelector('logo-img');
-logoImg.src = siteContent.images.['logoImg'];
+const logoImg = document.querySelector('#logo-img')
+logoImg.src = siteContent.images['logo-img']
 
-const ctaImg = document.querySelector('#cta-Img');
-cta.src = siteContent.images['cta-img'];
+const ctaImg = document.querySelector('#cta-img')
+ctaImg.src = siteContent.images['cta-img']
 
-const middleImage = document.querySelector('#middle-img');
-middleImage.setAttribute('src',siteContent['accent-img']);
+const midImg = document.querySelector('#middle-img')
+midImg.setAttribute('src', siteContent.images['accent-img'])
 
 // Footer Links
-const foorterLink = document.querySelector('footer a');
-footerLink.textContent = siteContent.footer.copyright;
-footerLink.classList.add('bold');
+const footerLink = document.querySelector('footer a')
+footerLink.textContent = siteContent.footer.copyright
+footerLink.classList.add('bold')
 
 //Contacts
 // Realisticallly there are 2 approaches hsown here, but one should be used for simplicity
-const contact = document.querySelector('section.contact');
-// contact.children[0].textContent = siteContent.contact['contact-h4'];
-contact.querySelector('h4').textContent.contact['contact-h4'];
-// contact.children[1].textContent = siteContent.contact['address'];
-contact.querySelector('p: nth-of-type(2)').textContent = siteContent.contact['phone'];
-contact.querySelector('p: nth-of-type(3)').textContent = siteContent.contact['email'];
+const contact = document.querySelector('section.contact')
+contact.children[0].textContent = siteContent.contact['contact-h4'];
+// contact.querySelector('h4').textContent.contact['contact-h4']
+contact.children[1].textContent = siteContent.contact['address'];
+contact.children[2].textContent = siteContent.contact['phone'];
+contact.children[3].textContent = siteContent.contact['email'];
+// contact.querySelector('p: nth-of-type(2)').textContent = siteContent.contact['phone']
+// contact.querySelector('p: nth-of-type(3)').textContent = siteContent.contact['email']
 
 //Top Content
 const topContent = document.querySelector('.top-content');
-topContent.children[0].children[0].textContent = siteContent['main-content']['features-h4'];
-topContent.children[0].children[1].textContent = siteContent['main-content']['features-content'];
-topContent.children[0].children[0].textContent = siteContent['main-content']['about-h4'];
-topContent.children[0].children[1].textContent = siteContent['main-content']['about-content'];
+topContent.children[0].children[0].textContent = siteContent['main-content']['features-h4']
+topContent.children[0].children[1].textContent = siteContent['main-content']['features-content']
+topContent.children[0].children[0].textContent = siteContent['main-content']['about-h4']
+topContent.children[0].children[1].textContent = siteContent['main-content']['about-content']
 
 //Bottom Content
-const bottomContent = document.querySelector('bottom-content');
+const bottomContent = document.querySelector('bottom-content')
+const h4sBottom = bottomContent.querySelectorAll('h4')
