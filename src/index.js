@@ -58,11 +58,11 @@ footerLink.classList.add('bold')
 //Contacts
 // Realisticallly there are 2 approaches hsown here, but one should be used for simplicity
 const contact = document.querySelector('section.contact')
-contact.children[0].textContent = siteContent.contact['contact-h4'];
+contact.children[0].textContent = siteContent.contact['contact-h4']
 // contact.querySelector('h4').textContent.contact['contact-h4']
-contact.children[1].textContent = siteContent.contact['address'];
-contact.children[2].textContent = siteContent.contact['phone'];
-contact.children[3].textContent = siteContent.contact['email'];
+contact.children[1].textContent = siteContent.contact['address']
+contact.children[2].textContent = siteContent.contact['phone']
+contact.children[3].textContent = siteContent.contact['email']
 // contact.querySelector('p: nth-of-type(2)').textContent = siteContent.contact['phone']
 // contact.querySelector('p: nth-of-type(3)').textContent = siteContent.contact['email']
 
@@ -70,8 +70,8 @@ contact.children[3].textContent = siteContent.contact['email'];
 const topContent = document.querySelector('.top-content');
 topContent.children[0].children[0].textContent = siteContent['main-content']['features-h4']
 topContent.children[0].children[1].textContent = siteContent['main-content']['features-content']
-topContent.children[0].children[0].textContent = siteContent['main-content']['about-h4']
-topContent.children[0].children[1].textContent = siteContent['main-content']['about-content']
+topContent.children[1].children[0].textContent = siteContent['main-content']['about-h4']
+topContent.children[1].children[1].textContent = siteContent['main-content']['about-content']
 
 //Bottom Content
 const bottomContent = document.querySelector('.bottom-content')
@@ -80,3 +80,20 @@ h4sBottom[0].textContent = siteContent['main-content']['services-h4']
 h4sBottom[1].textContent = siteContent['main-content']['product-h4']
 h4sBottom[2].textContent = siteContent['main-content']['vision-h4']
 
+const pBottom = bottomContent.querySelectorAll('p')
+pBottom[0].textContent = siteContent['main-content']['services-content']
+pBottom[1].textContent = siteContent['main-content']['product-content']
+pBottom[2].textContent = siteContent['main-content']['vision-content']
+
+//CTA
+document.querySelector('.cta .cta-text h1').textContent = siteContent.cta.h1
+document.querySelector('.cta .cta-text button').textContent = siteContent.cta.button
+
+//NAV Links
+const navLinks = document.querySelectorAll('header nav a')
+const navLinksText = Object.values(siteContent.nav)
+navLinks.forEach((link, idx) => {
+  link.textContent = navLinksText[idx]
+  link.classList.add('italic')
+})
+// for (let link of document.querySelectorAll('header nav a'))
